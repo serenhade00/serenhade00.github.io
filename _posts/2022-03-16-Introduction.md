@@ -19,7 +19,7 @@ date: 2022-03-16 22:30
     ![My Algorithm Radar Chart](https://github.com/serenhade00/serenhade00.github.io/blob/main/assets/algorithm.png?raw=true)
 
 
-<p align="center"> ↑ 알고리즘 종류 레이더 차트 ↑
+                    ↑ 알고리즘 종류 레이더 차트 ↑
     
 
 
