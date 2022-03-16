@@ -16,36 +16,38 @@ lang: en
 prefer_datetime_locale:
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: Asia/Seoul
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: AHAH                          # the main title
+title: 이곳, 세렌하데.                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: Sophomore/Programmer   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  SerenH's Blog since 22.03 / Finding Serenditpiy 
+
+author: Seonghwan-Shin
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://serenhade00.github.io"
 
 github:
-  username: github_username             # change to your github username
+  username: serenhade00             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: null            # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@doamin.com             # change to your email address
+  name: Seonghwan_Shin
+  email: seonghwan911@naver.com            # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    - https://www.facebook.com/seonghwan911     # change to your twitter homepage
+    - https://github.com/serenhade00       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
