@@ -44,7 +44,7 @@ date: 2022-03-16 22:30
 
 * **Big-O 표기법**
 
-    ![Time_Complex2](https://t1.daumcdn.net/cfile/tistory/246F3F3E590B81B234)
+    ![Time_Complex2](https://camo.githubusercontent.com/8f93ea2bedbae36f5d4652edeb200f8c592d35a1e6dd9406a8edeacadb1fa124/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3438353731332f3534373231372f61313138623465382d633262622d313165322d393566612d6237613539313462626636652e706e67)
 
     * `f(n)`의 점근적 상한(asymptotic upper bound)을 나타낸다.
     * 어떤 식 `f(n)`이 있으면, 그 식의 최고 차항을 가져오면 된다.
