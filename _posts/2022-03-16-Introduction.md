@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction To Computer Algorithm
-date: 2022-03-16 22:30
+date: 2022-03-17 15:30
 
 ---
 
@@ -49,9 +49,8 @@ date: 2022-03-16 22:30
     * `f(n)`의 점근적 상한(asymptotic upper bound)을 나타낸다.
     * 어떤 식 `f(n)`이 있으면, 그 식의 최고 차항을 가져오면 된다.
         * ex) 
-    $$
-      f(n) = 3n^2+2n+1 → O(n^2)
-    $$
+    $$f(n) = 3n^2+2n+1 → O(n^2)$$
+    
       
 
 
