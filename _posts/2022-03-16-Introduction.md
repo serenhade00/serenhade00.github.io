@@ -19,7 +19,7 @@ date: 2022-03-16 22:30
     ![My Algorithm Radar Chart](https://github.com/serenhade00/serenhade00.github.io/blob/main/assets/algorithm.png?raw=true)
 
 
-                                    ↑ 알고리즘 종류 레이더 차트 ↑
+   <p align="center">↑ 알고리즘 종류 레이더 차트 ↑</p>
     
 
 
@@ -48,7 +48,7 @@ date: 2022-03-16 22:30
 
     * `f(n)`의 점근적 상한(asymptotic upper bound)을 나타낸다.
     * 어떤 식 `f(n)`이 있으면, 그 식의 최고 차항을 가져오면 된다.
-        * ex) $ f(n) = 3n^2+5n+2 $ ------> $ O(n^2) $
+        * ex) $f(n) = 3n^2+5n+2$ ------> $O(n^2)$
 
 
     ~~`f : 내가 아무리 안 좋아도 쟤(g)보단 성능이 나쁘지 않다`~~
@@ -96,7 +96,7 @@ Git: [리누스 토르발스](https://namu.wiki/w/%EB%A6%AC%EB%88%84%EC%8A%A4%20
     * 원하는 경로에 Git 저장소를 만듬. (Initialize)
  * `git status`
     * 현재 Git 상태를 보게 해줌.   
-    `이게 되게 편한게 본인이 어떤 변경사항을 만든다면 그걸 인식하고 직관적으로 현재 상태를 보여준다` 
+    * <span style="background-color: lightyellow">이게 되게 편한게 본인이 어떤 변경사항을 만든다면 그걸 인식하고 직관적으로 현재 상태를 보여준다.</span> 
 
  * `git add`
     * Git에 올라가기 전에 원하는 파일들을 대기실(staging area)로 추가함
@@ -125,13 +125,18 @@ Github: 대표적인 무료 **Git** 저장소.
 *** 
 
 * 알고리즘에 대한 간략한 소개를 진행했다. 
+
+
 * 시간/공간 복잡도에 대한 개념을 배웠다. (프로그램 짤 때 고려사항)
 
-* **GIT** 명령어를 하도 쓰다보니 이제 좀 익숙해진것 같다. ~~아닌가?~~
+
+* **GIT** 명령어를 하도 쓰다보니 이제 좀 익숙해진것 같다 .~~아닌가?~~
+
+
 * 이 `Chirpy` 테마는 `gh-pages` 라는 새로운 branch를 생성하여 그 branch를 연결하여 사용하는 다른 테마와는 조금 다른 적용 방식을 가지고 있었다. 그래서 테마 적용하는데만 오류가 떠서 몇시간을 잡아먹혔다.
 
 
-다음 수업에 다시 돌아오겠습니다.
+<p align="center">그럼, 다음 수업에 돌아오겠습니다.</p>
 
 
 
