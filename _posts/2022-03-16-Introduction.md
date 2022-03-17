@@ -48,7 +48,9 @@ date: 2022-03-17 15:30
 
     * `f(n)`의 점근적 상한(asymptotic upper bound)을 나타낸다.
     * 어떤 식 `f(n)`이 있으면, 그 식의 최고 차항을 가져오면 된다.
-        * ex) 
+   * ex) 
+        
+        ![equa1](https://github.com/serenhade00/serenhade00.github.io/blob/main/assets/equa1.png?raw=true)
     
       
 
