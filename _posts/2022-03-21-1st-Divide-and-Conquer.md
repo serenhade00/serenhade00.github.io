@@ -19,7 +19,7 @@ date: 2022-03-21 15:50
 
 ### **분할 정복(Divide and Conquer) :**
 
-<p align="center"><img src = "https://cdn.kastatic.org/ka-perseus-images/db9d172fc33b90e905c1213b8cce660c228bb99c.png" width="600" height ="400" /></p>
+<img src = "https://cdn.kastatic.org/ka-perseus-images/db9d172fc33b90e905c1213b8cce660c228bb99c.png" width="600" height ="400" />
 
 * <mark>정의:</mark> 
     * 어렵고 복잡한 문제를 비교적 쉬운 간단한 문제들로 **쪼개서(Divide)** 그 문제들을 각개 **정복(Conquer)** 해나가는 것.
@@ -93,7 +93,7 @@ date: 2022-03-21 15:50
 
 * n개의 숫자가 주어졌다고 하자. n/2개씩 2개의 부분문제로 분할하고, base condition에 도달시 2개의 부분문제를 정렬시키며 합병하여 정렬(정복)한다. 즉, **합병 과정**이 **정복 과정**인 셈이다. 
 
-<p align="center"><img src = "https://media.vlpt.us/images/devjade/post/e65e83c6-0984-4df9-9a7b-51ff8046a3a1/image.png" width="600" height ="400" /></p>
+<img src = "https://media.vlpt.us/images/devjade/post/e65e83c6-0984-4df9-9a7b-51ff8046a3a1/image.png" width="600" height ="400" />
 
 **시간복잡도는?**
     
@@ -164,13 +164,13 @@ void merge(int start, int end)
 
 * 동작 방식은 이렇다. `pivot`이라는 하나의 원소를 정해 `pivot`보다 작은 원소들은 `pivot`의 왼쪽으로, 큰 원소들은 오른쪽으로 보낸다. (이때, 순서는 상관없다. 그저 방금 말한 조건만 만족하면 된다.) 그럼 `pivot`을 기준으로 왼쪽 오른쪽에 배열이 생길것이다. ~~(`pivot`이 최대, 최소 값이 아닌 이상)~~ 그 각각의 배열에서 재귀적으로 새로운 `pivot`을 설정하고 이 과정을 되풀이 하다보면 결국 숫자들이 자기 자리를 찾아가면서 전체 정렬이 될것이다. 
 
-<p align="center"><img src = "https://t1.daumcdn.net/cfile/tistory/271D2B3354545F7A13" width="400" height ="400" /></p>
+<img src = "https://t1.daumcdn.net/cfile/tistory/271D2B3354545F7A13" width="400" height ="400" />
 
 **시간복잡도는?**
     
 입력이 N인 배열이 주어졌다고 하자. 퀵 정렬은 아까 말했듯이 정복을 먼저한다. 즉, `pivot`을 옳은 위치로 보내는 행위를 말한다. 정복 부분에서 각 층(내려가면서 1, 2, 3...k층)에서 `pivot`을 옳은 위치로 보내려면 결국 N개의 숫자를 모두 확인해야한다. 즉 `pivot`을 잘 설정해서 정확히 배열을 이등분 해나가는 과정을 반복하면 병합 정렬과 같은 $O(NlogN)$의 시간복잡도를 가진다. 
 
-<p align="center"><img src = "https://www.baeldung.com/wp-content/uploads/sites/4/2020/08/Capture.png" width="600" height ="400" /></p>
+<img src = "https://www.baeldung.com/wp-content/uploads/sites/4/2020/08/Capture.png" width="600" height ="400" />
 
 하지만 주의할점이 있다. 바로 `pivot`을 어떻게 정하냐인데, 만약 오름차순으로 이미 정렬된 배열이 입력으로 주어졌다고 하자. 그러면 `pivot`을 만약 첫번째 원소로 잡을 경우 1의 옳은 자리는 원래 자리 그대로다. 그 다음에 1의 오른쪽에만 배열이 남아있기에 과정을 반복한다. 이러다가 보면 결국 하나의 층에서 하나의 원소만을 배제시키는 것이다. 
 
