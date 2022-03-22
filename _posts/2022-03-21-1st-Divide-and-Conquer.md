@@ -187,24 +187,24 @@ math: true
 
 **동작 코드:**
 
-```C++
-    void quick_sort(int start, int end) 
-    { 
-        if(end <= start+1) return; 
-        int pivot = arr[start]; 
-        int l = st+1; // 왼쪽 끝 포인터 
-        int r = en-1; // 오른쪽 끝 포인터
-        while(1)
-        {
-            while(l <= r && arr[l] <= pivot) l++;
-            while(l <= r && arr[r] >= pivot) r--;
-            if(l > r) break; 
-            swap(arr[l], arr[r]);
-        }
-        swap(arr[st], arr[r]);
-        quick_sort(st, r);
-        quick_sort(r+1, en);
+```c
+void quick_sort(int start, int end) 
+{ 
+    if(end <= start+1) return; 
+    int pivot = arr[start]; 
+    int l = st+1; // 왼쪽 끝 포인터 
+    int r = en-1; // 오른쪽 끝 포인터
+    while(1)
+    {
+        while(l <= r && arr[l] <= pivot) l++;
+        while(l <= r && arr[r] >= pivot) r--;
+        if(l > r) break; 
+        swap(arr[l], arr[r]);
     }
+    swap(arr[st], arr[r]);
+    quick_sort(st, r);
+    quick_sort(r+1, en);
+}
 ```
 
 * 과정은 이렇다.
