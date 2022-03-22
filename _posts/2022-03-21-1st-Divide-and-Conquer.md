@@ -112,37 +112,37 @@ math: true
 
 **동작 코드:**
 
-```C++
-    void merge_sort(int start, int end) // 분할 함수
-    {
-        if(end == start+1) // 배열 길이가 1이면 탈출
-            return; 
-        int mid = (start+end)/2; // 배열을 이등분하기 위한 중간 인덱스 설정
-        merge_sort(start, mid); // 왼쪽 배열 나누기
-        merge_sort(mid, end); // 오른쪽 배열 나누기 
-        merge(start, end); // start부터 end까지 정렬
-    }
+```c++
+void merge_sort(int start, int end) // 분할 함수
+{
+    if(end == start+1) // 배열 길이가 1이면 탈출
+        return; 
+    int mid = (start+end)/2; // 배열을 이등분하기 위한 중간 인덱스 설정
+    merge_sort(start, mid); // 왼쪽 배열 나누기
+    merge_sort(mid, end); // 오른쪽 배열 나누기 
+    merge(start, end); // start부터 end까지 정렬
+}
 ```
 
 * 분할 과정은 이렇다.
     - `mid`인덱스를 설정하여 이등분할 지점을 고른다. 그 후 왼쪽 시작 `start` 인덱스 부터 `mid`, `mid`부터 오른쪽 끝 `end`까지의 2개로 나누어 재귀적으로 함수를 호출한다. (주의, 실제로 배열이 나뉜건 아니고, 함수 호출을 통해 그때그때 배열이 관념적으로 나뉘었다고 생각). 그러다가 하나의 숫자만 남을때까지 나누면 `return`하여 `merge`함수를 통해 정렬 및 합병을 시작한다. 
 
 
-```C++
-    void merge(int start, int end)
+```c++
+void merge(int start, int end)
+{
+    int mid = (start+end)/2;
+    int lidx = start; // 왼쪽 배열의 시작 인덱스
+    int ridx = mid; // 오른쪽 배열의 시작 인덱스
+    for(int i = start; i < end; i++)
     {
-        int mid = (start+end)/2;
-        int lidx = start; // 왼쪽 배열의 시작 인덱스
-        int ridx = mid; // 오른쪽 배열의 시작 인덱스
-        for(int i = start; i < end; i++)
-        {
-            if(lidx == mid) tmp[i] = arr[ridx++]; // 1
-            else if(ridx == end) tmp[i] = arr[lidx++]; // 2
-            else if(arr[lidx] <= arr[ridx]) tmp[i] = arr[lidx++]; // 3
-            else tmp[i] = arr[ridx++]; // 4
-        }
-        for(int i = st; i < en; i++) arr[i] = tmp[i]; 
+        if(lidx == mid) tmp[i] = arr[ridx++]; // 1
+        else if(ridx == end) tmp[i] = arr[lidx++]; // 2
+        else if(arr[lidx] <= arr[ridx]) tmp[i] = arr[lidx++]; // 3
+        else tmp[i] = arr[ridx++]; // 4
     }
+    for(int i = st; i < en; i++) arr[i] = tmp[i]; 
+}
 ```
 
 * 합병 과정은 이렇다. 
@@ -187,7 +187,7 @@ math: true
 
 **동작 코드:**
 
-```c
+```c++
 void quick_sort(int start, int end) 
 { 
     if(end <= start+1) return; 
