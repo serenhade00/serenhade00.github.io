@@ -2,6 +2,7 @@
 layout: post
 title: Chapter 1. Divide & Conquer
 date: 2022-03-21 15:50
+math: true
  
 ---
 
@@ -110,16 +111,17 @@ date: 2022-03-21 15:50
 
 
 **동작 코드:**
+
 ```C++
-void merge_sort(int start, int end) // 분할 함수
-{
-  	if(end == start+1) // 배열 길이가 1이면 탈출
-		return; 
-  	int mid = (start+end)/2; // 배열을 이등분하기 위한 중간 인덱스 설정
-	merge_sort(start, mid); // 왼쪽 배열 나누기
-  	merge_sort(mid, end); // 오른쪽 배열 나누기 
- 	merge(start, end); // start부터 end까지 정렬
-}
+    void merge_sort(int start, int end) // 분할 함수
+    {
+        if(end == start+1) // 배열 길이가 1이면 탈출
+            return; 
+        int mid = (start+end)/2; // 배열을 이등분하기 위한 중간 인덱스 설정
+        merge_sort(start, mid); // 왼쪽 배열 나누기
+        merge_sort(mid, end); // 오른쪽 배열 나누기 
+        merge(start, end); // start부터 end까지 정렬
+    }
 ```
 
 * 분할 과정은 이렇다.
@@ -127,20 +129,20 @@ void merge_sort(int start, int end) // 분할 함수
 
 
 ```C++
-void merge(int start, int end)
-{
-  	int mid = (start+end)/2;
-  	int lidx = start; // 왼쪽 배열의 시작 인덱스
-  	int ridx = mid; // 오른쪽 배열의 시작 인덱스
-  	for(int i = start; i < end; i++)
+    void merge(int start, int end)
     {
-		if(lidx == mid) tmp[i] = arr[ridx++]; // 1
-		else if(ridx == end) tmp[i] = arr[lidx++]; // 2
-		else if(arr[lidx] <= arr[ridx]) tmp[i] = arr[lidx++]; // 3
-    	else tmp[i] = arr[ridx++]; // 4
-  	}
-  	for(int i = st; i < en; i++) arr[i] = tmp[i]; 
-}
+        int mid = (start+end)/2;
+        int lidx = start; // 왼쪽 배열의 시작 인덱스
+        int ridx = mid; // 오른쪽 배열의 시작 인덱스
+        for(int i = start; i < end; i++)
+        {
+            if(lidx == mid) tmp[i] = arr[ridx++]; // 1
+            else if(ridx == end) tmp[i] = arr[lidx++]; // 2
+            else if(arr[lidx] <= arr[ridx]) tmp[i] = arr[lidx++]; // 3
+            else tmp[i] = arr[ridx++]; // 4
+        }
+        for(int i = st; i < en; i++) arr[i] = tmp[i]; 
+    }
 ```
 
 * 합병 과정은 이렇다. 
@@ -184,24 +186,25 @@ void merge(int start, int end)
 퀵 정렬은 따로 새로운 배열을 생성하는게 아닌 원래 기존 배열에서의 원소의 자리를 바꿔나가기 때문에 추가 메모리는 필요 없다. 그저 평균 함수 호출의 수가 $log(N)$ 정도라고 한다.
 
 **동작 코드:**
+
 ```C++
-void quick_sort(int start, int end) 
-{ 
-	if(end <= start+1) return; 
-	int pivot = arr[start]; 
-	int l = st+1; // 왼쪽 끝 포인터 
-	int r = en-1; // 오른쪽 끝 포인터
-	while(1)
-    {
-		while(l <= r && arr[l] <= pivot) l++;
-		while(l <= r && arr[r] >= pivot) r--;
-		if(l > r) break; 
-		swap(arr[l], arr[r]);
-	}
-	swap(arr[st], arr[r]);
-	quick_sort(st, r);
-	quick_sort(r+1, en);
-}
+    void quick_sort(int start, int end) 
+    { 
+        if(end <= start+1) return; 
+        int pivot = arr[start]; 
+        int l = st+1; // 왼쪽 끝 포인터 
+        int r = en-1; // 오른쪽 끝 포인터
+        while(1)
+        {
+            while(l <= r && arr[l] <= pivot) l++;
+            while(l <= r && arr[r] >= pivot) r--;
+            if(l > r) break; 
+            swap(arr[l], arr[r]);
+        }
+        swap(arr[st], arr[r]);
+        quick_sort(st, r);
+        quick_sort(r+1, en);
+    }
 ```
 
 * 과정은 이렇다.
